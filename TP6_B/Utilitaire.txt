@@ -1,0 +1,174 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Utilitaire {
+
+
+
+    public static int saisirIntMinMax(int min, int max) {
+        //{ min <= max } => { résultat = entier compris entre min et max ]
+        Scanner lecteur = new Scanner(System.in);
+        int value = 0;
+
+        do {
+            System.out.print("Veuillez rentrez un entier entre "+ min + " et "+ max + " : ");
+            value = lecteur.nextInt();
+            if (value < min | value > max){
+                System.out.println("Vous avez rentré une année trop petite ou trop grande, ré-essayer !");
+            }
+            lecteur.nextLine();
+        }while (value < min | value > max);
+
+        return value;
+
+    }
+
+
+    public static int rechPremIndSeq(ArrayList<Polar> vPolar, int an, String aut) {
+        // {vPolar trié dans l'ordre (annee, auteur)} =>
+        // {* s'il y a dans vPolar au moins un élément d'année an et d'auteur aut,
+        // résultat = indice du premier de ces éléments
+        // * sinon, résultat = -1}
+        // LA RECHERCHE EST SÉQUENTIELLE !!!
+        int i = 0;
+
+        while (i<vPolar.size() && (vPolar.get(i).getAnnee() < an )){
+            i++;
+
+            }
+        while (i<vPolar.size() && vPolar.get(i).getAuteur().compareTo(aut)!= 0){
+            i++;
+        }
+
+        if (i<vPolar.size() && (vPolar.get(i).getAnnee() == an && vPolar.get(i).getAuteur().compareTo(aut) == 0)){
+            return i;
+        }
+        else {
+            return -1;
+        }
+
+    }
+
+
+    public static int rechPremIndDicho(ArrayList<Polar> vPolar, int an, String aut) {
+        // {vPolar trié dans l'ordre (annee, auteur)} =>
+        // {* s'il y a dans vPolar au moins un élément d'année an et d'auteur aut,
+        // résultat = indice du premier de ces éléments
+        // * sinon, résultat = -1}
+        // LA RECHERCHE EST DICHOTOMIQUE !!!
+
+        int inf = 0;
+        int sup = vPolar.size()-1;
+        int milieu;
+
+        while (inf < sup){
+            milieu = (inf + sup)/2;
+
+            if (vPolar.get(milieu).getAnnee() >= an){
+                sup = milieu;
+            }
+            else {
+                inf = milieu + 1;
+            }
+        }
+
+
+        if (vPolar.get(sup).getAnnee() == an ){
+            int i = 0;
+            while (i<vPolar.size() && vPolar.get(i).getAuteur().compareTo(aut)!= 0){
+                i++;
+            }
+            if (i<vPolar.size() && (vPolar.get(i).getAnnee() == an && vPolar.get(i).getAuteur().compareTo(aut) == 0)){
+                return i;
+            }
+            else {
+                return -1;
+            }
+        }
+        else {
+            return -1;
+        }
+
+    }
+
+    public static boolean existPolar(ArrayList<Polar> vPolar,
+                                     int an1, int an2, String unAuteur) {
+        // { * vPolar non vide et trié dans l'ordre (annee, auteur)
+        // * an1 <= an2
+        // * an1 est >= à la plus petite valeur de l'attribut annee dans vPolar
+        // * an2 est <= à la plus grande valeur de l'attribut année dans vPolar }
+        // => { résultat = vrai s'il existe dans vPolar, au moins un roman
+        // dont l'année est comprise entre an1 et an2 et d'auteur unAuteur'}
+
+        int annee = 1971;
+        int i = 0;
+
+       while (i<vPolar.size() && rechPremIndDicho(vPolar, annee, unAuteur) == -1){
+
+           i++;
+           annee+=1;
+           }
+
+       if (i == vPolar.size()){
+           return false;
+       }
+       else {
+           return true;
+       }
+    }
+
+    public static void lesPolarsDe(ArrayList<Polar> vPolar,
+                                   int an1, int an2, String unAuteur) {
+        // { * vPolar non vide et trié dans l'ordre (annee, auteur)
+        // * an1 <= an2
+        // * an1 est >= à la plus petite valeur de l'attribut annee dans vPolar
+        // * an2 est <= à la plus grande valeur de l'attribut année dans vPolar }
+        // * vPolar contient au moins un roman dont l'auteur est unAuteur
+        // et dont l'année est dans l'intervalle [an1, an2} }
+        // => { chaque année A comprise entre an1 et an2 est affichée, suivie :
+        // * d'un tiret, si aucun roman n'a été écrit l'année A par unAuteur
+        // * de l'affichage ligne à ligne des titres des romans écrits par
+        // unAuteur, l'année A (chaque titre précédé d'un tiret) }
+        int index_1, index_2;
+        int indice_test = 0;
+        ArrayList<Integer> les_annee = new ArrayList<>();
+
+        System.out.println("Roman de " + unAuteur + " entre " + an1 + " et " + an2 + " : ");
+        if (existPolar(vPolar, an1, an2, unAuteur)) {
+
+            index_1 = rechPremIndSeq(vPolar, an1, unAuteur);
+            index_2 = rechPremIndSeq(vPolar, an2, unAuteur);
+            System.out.println(index_1 + " " + index_2);
+
+            while (index_1 <= index_2) {
+
+
+                if (vPolar.get(index_1).getAuteur().compareTo(unAuteur) == 0) {
+                    System.out.println("*Année " + vPolar.get(index_1).getAnnee());
+                    while(vPolar.get(index_1 + indice_test).getAuteur().compareTo(unAuteur) == 0) {
+                        System.out.println("- " + vPolar.get(index_1 + indice_test).getTitre());
+                        indice_test += 1;
+                    }
+                }
+
+                else {
+                    System.out.println("*Année " + vPolar.get(index_1).getAnnee());
+                    System.out.println("- ");
+                }
+                index_1 += 1;
+            }
+
+        }
+
+
+        else {
+            System.out.println("Aucun roman de " + unAuteur + " entre " + an1 + " et " + an2);
+        }
+
+        System.out.println("--------------------------------------");
+        }
+
+
+
+    }
+

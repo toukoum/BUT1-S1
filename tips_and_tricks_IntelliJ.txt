@@ -1,0 +1,97 @@
+
+
+-------------------------------------------------------------
+			Shortcut
+-------------------------------------------------------------
+
+Editing
+-------
+
+Ctrl+C				Copy current line or selected block to clipboard
+Ctrl+V				Paste from clipboard
+Ctrl+D 				Duplicate current line or selected block
+Ctrl+Y 				Delete line at caret
+
+Alt + Insert 			Generate code !!! (Getters, Setters, Constructors, hashCode/equals, toString)
+
+Ctrl + Shift + Enter 		Complete statement
+Ctrl + Alt + L 			Reformat code (le refaire beau)
+
+Ctrl + W 			Select successively increasing code blocks
+Ctrl + Shift + W 		Decrease current selection to previous state
+
+Ctrl + Delete			Delete to word end/start
+
+Ctrl + j 			Create a new Java Class
+
+Shift + Alt + up/down		Move select code up/down
+
+
+Navigation
+----------
+
+Ctrl + N 			Go to class
+Esc 				Go to editor (from tool window)
+Alt + Right/Left 		Go to next / previous editor tab (changer de fenêtre)
+Alt + 1				Show Project menu
+Shift + Ctrl + f12		Hide active or last active window
+
+
+Search/Replace
+--------------
+
+Double Shift 			Search everywhere
+
+
+Refactoring
+-----------
+
+Shift + F6 			Rename
+
+
+Run
+---
+
+Shift + F10/F9 			Run/Debug
+
+
+Git 
+---
+
+Ctrl + k			Commit
+Ctrl + Shift + k		Push
+
+
+
+-------------------------------------------------------------
+			Tips/Tricks
+-------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
