@@ -98,7 +98,7 @@ public class AlgoString {
             PaireResCompteur<Integer> gauche = nbCarMinDPRWorkerO(vString, 0, m);
             PaireResCompteur<Integer> droite = nbCarMinDPRWorkerO(vString, m + 1, sup);
 
-            if (gauche.getRes().len < droite.getRes()) {
+            if (gauche.getRes() < droite.getRes()) {
                 c++;
                 resultat = new PaireResCompteur(gauche.getRes(), c);
                 return resultat;
