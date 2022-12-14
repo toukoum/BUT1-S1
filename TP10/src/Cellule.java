@@ -7,10 +7,9 @@ public class Cellule<TypeInfo> {
 
     /**
      * Constructeur de Cellule sans suivante
-     * @param info
      */
-    public Cellule(TypeInfo info) {
-        this.info = info;
+    public Cellule(TypeInfo val) {
+        this.info = val;
         celluleSuivante = null;
     }
 

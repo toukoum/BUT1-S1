@@ -55,12 +55,15 @@ public class ListeInt_Main {
 
         //B3 - Insertion d'un élément dans listeInt - Déclaration d'une nouvelle liste
         ListeChainee<Integer> listeTriee = new ListeChainee<>();
-
+        System.out.print("Affichage de la Gauche vers la Droite : ");
+        listeInt.afficheGaucheDroiteIter();
         //insertion des éléments de listeInt dans listeTriee par appel de insereDansListeTriee
-        i = 1;
-        while (i < listeInt.getLongueur()) {
-            Utilitaire.insereDansListeTriee(listeTriee, listeInt.getInfoAtPosit(i));
-            i++;
+        Cellule<Integer> c =listeInt.getTete();
+
+        while (c != null) {
+            Utilitaire.insereDansListeTriee(listeTriee, c.getInfo());
+            c = c.getCelluleSuivante();
+            listeTriee.afficheGaucheDroiteRec();
         }
 
         //affichage d'un message indiquant si listeTriee est effectivement triée par ordre croissant au sens large
