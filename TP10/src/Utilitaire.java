@@ -73,14 +73,28 @@ public class Utilitaire {
     }
 
 
-    public static int sommeListeInt(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
+//    public static int sommeListeInt(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
+//        //{liste non vide} => {résultat = somme des éléments de liste
+//
+//        int somme = 0;
+//        int i = 1;
+//        while (i <= liste.getLongueur()) {
+//            somme += liste.getInfoAtPosit(i);
+//            i++;
+//        }
+//
+//        return somme;
+//
+//
+//    }
+    public static int sommeListeInt(ListeChainee<Integer> liste){
         //{liste non vide} => {résultat = somme des éléments de liste
 
+        Cellule<Integer> c = liste.getTete();
         int somme = 0;
-        int i = 1;
-        while (i <= liste.getLongueur()) {
-            somme += liste.getInfoAtPosit(i);
-            i++;
+        while (c != null) {
+            somme += c.getInfo();
+            c = c.getCelluleSuivante();
         }
 
         return somme;
@@ -93,7 +107,6 @@ public class Utilitaire {
         //{liste non vide} => {résultat = somme des éléments de liste }
 
         return sommeListeIntRecWorker(liste.getTete());
-
     }
 
     private static int sommeListeIntRecWorker(Cellule<Integer> cellCour) {
@@ -105,7 +118,6 @@ public class Utilitaire {
         }
 
         return somme;
-
     }
 
 
@@ -133,35 +145,85 @@ public class Utilitaire {
     }
 
 
-    public static int premPosVal(ListeChainee<Integer> liste, int val) throws ExceptionMauvaisIndice {
+//    public static int premPosVal(ListeChainee<Integer> liste, int val) throws ExceptionMauvaisIndice {
+//        //{liste non vide} => {résultat = position de la première cellule de liste
+//        // portant l'info val, 0 si non trouvée
+//        // ALGORITHME ITÉRATIF}
+//
+//        int i = 1;
+//
+//        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i) != val) {
+//            i++;
+//        }
+//
+//        if (i <= liste.getLongueur() && liste.getInfoAtPosit(i) == val) {
+//            return i;
+//        } else {
+//            return 0;
+//        }
+//    }
+
+    public static int premPosVal(ListeChainee<Integer> liste, int val){
         //{liste non vide} => {résultat = position de la première cellule de liste
         // portant l'info val, 0 si non trouvée
         // ALGORITHME ITÉRATIF}
 
+        Cellule <Integer> c = liste.getTete();
         int i = 1;
 
-        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i) != val) {
+        while (c != null && c.getInfo() != val) {
+            c = c.getCelluleSuivante();
             i++;
         }
 
-        if (i <= liste.getLongueur() && liste.getInfoAtPosit(i) == val) {
+        if (c != null && c.getInfo() == val) {
             return i;
-        } else {
+        }
+        else {
             return 0;
         }
     }
 
 
+//    public static void insereDansListeTriee(ListeChainee<Integer> liste, int val) throws ExceptionMauvaisIndice {
+//        //{liste triée} => {une cellule d'info = val a été insérée dans liste,
+//        // liste reste triée après insertion - FORME ITÉRATIVE}
+//
+//        int i = 1;
+//
+//        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i) <= val) {
+//            i++;
+//        }
+//        liste.insereAtPosit(i, val);
+//    }
+
     public static void insereDansListeTriee(ListeChainee<Integer> liste, int val) throws ExceptionMauvaisIndice {
         //{liste triée} => {une cellule d'info = val a été insérée dans liste,
         // liste reste triée après insertion - FORME ITÉRATIVE}
 
-        int i = 1;
+        Cellule<Integer> c = liste.getTete();
+        Cellule<Integer> p = null;
 
-        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i) <= val) {
-            i++;
+
+        while (c != null && c.getInfo() < val) {
+            //System.out.printf("info"+ c.getInfo());
+            p = c;
+            //System.out.println("c:"+c);
+            c = c.getCelluleSuivante();
         }
-        liste.insereAtPosit(i, val);
+
+        if (p == null) {
+            liste.insereTete(val);
+        }
+        else {
+            Cellule<Integer> n = new Cellule<>(val);
+            //n.setCelluleSuivante(p.getCelluleSuivante());
+            p.setCelluleSuivante(n);
+            n.setCelluleSuivante(c);
+
+        }
+
+
     }
 
 

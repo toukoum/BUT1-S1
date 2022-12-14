@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7c2053d-248e-40ec-8122-8ce850d5197a" name="Changes" comment="" />
+    <list default="true" id="c7c2053d-248e-40ec-8122-8ce850d5197a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../TP10/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/out/production/TP10/Cellule.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/out/production/TP10/Cellule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/out/production/TP10/ControleSaisie.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/out/production/TP10/ControleSaisie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/out/production/TP10/ExceptionMauvaisIndice.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/out/production/TP10/ExceptionMauvaisIndice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/out/production/TP10/ListeChainee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/out/production/TP10/ListeChainee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/out/production/TP10/ListeInt_Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/out/production/TP10/ListeInt_Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/out/production/TP10/ListeInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/out/production/TP10/ListeInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/out/production/TP10/Utilitaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/out/production/TP10/Utilitaire.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/src/Cellule.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/src/Cellule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP10/src/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TP10/src/Utilitaire.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +26,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2G5uALhC3H9cYnyky1cEPUXOG6z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,7 +42,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/users/info/etu-1a/giraurap/BUT-1/TP5_B"
   }
 }]]></component>
   <component name="RunManager">
@@ -57,5 +74,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
