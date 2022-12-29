@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="963654fd-c650-4b0a-86e0-f4cb4e07ed25" name="Changes" comment="after modify output path" />
+    <list default="true" id="963654fd-c650-4b0a-86e0-f4cb4e07ed25" name="Changes" comment="after modify output path">
+      <change afterPath="$PROJECT_DIR$/algoImportant/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP10/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TP10/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP10/out/production/TP10/Cellule.class" beforeDir="false" afterPath="$PROJECT_DIR$/TP10/out/production/TP10/Cellule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP10/out/production/TP10/ListeInt_Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/TP10/out/production/TP10/ListeInt_Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP10/out/production/TP10/Utilitaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/TP10/out/production/TP10/Utilitaire.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP10/src/ListeInt_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/TP10/src/ListeInt_Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP10/src/Utilitaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/TP10/src/Utilitaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP5_B/src/Pollution.java" beforeDir="false" afterPath="$PROJECT_DIR$/TP5_B/src/Pollution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo_important/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo_important/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo_important/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo_important/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo_important/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo_important/algo_important.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo_important/out/production/algo_important/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo_important/src/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -17,27 +42,29 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IapHJLcUD3MmYUGNAkTHhIEx5q" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/rapha/Desktop/BUT-1/R1.01/TP10",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rapha/Desktop/BUT-1/R1.01&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Pollution">
     <configuration name="Explore_Strings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Explore_Strings" />
@@ -75,6 +102,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="R1.01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="R1.01" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Explore_Strings" />
       <item itemvalue="Application.Pollution" />
@@ -101,7 +141,9 @@
       <option name="presentableId" value="Default" />
       <updated>1670429460134</updated>
       <workItem from="1670429461663" duration="5545000" />
-      <workItem from="1671034785037" duration="201000" />
+      <workItem from="1671034785037" duration="769000" />
+      <workItem from="1672077659334" duration="2405000" />
+      <workItem from="1672321522054" duration="79000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1670429823254</created>

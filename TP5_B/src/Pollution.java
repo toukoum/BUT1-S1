@@ -3,11 +3,11 @@ import java.util.Arrays;
 
 public class Pollution {
     public static void main(String[] args) {
-        ArrayList<String> lesMois = new ArrayList<>(Arrays.asList("janvier","février","mars","avril","mai","juin","juillet","août",
-                "septembre","octobre","novembre", "décembre"));
+        ArrayList<String> lesMois = new ArrayList<>(Arrays.asList("janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
+                "septembre", "octobre", "novembre", "décembre"));
 
         ArrayList<ReleveMensuel> testReleve = new ArrayList<>();
-        for (int i = 0; i<lesMois.size(); i++){
+        for (int i = 0; i < lesMois.size(); i++) {
             testReleve.add(i, new ReleveMensuel(lesMois.get(i), 0));
         }
 
@@ -17,9 +17,6 @@ public class Pollution {
         System.out.println(testReleve);
 
         System.out.println(Utilitaire.saisieReleves(lesMois));
-
-
-
 
 
     }

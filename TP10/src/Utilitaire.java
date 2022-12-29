@@ -229,118 +229,18 @@ public class Utilitaire {
 
 
 
-//    public static boolean verifTri(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
-//        //{} => {résultat = vrai si liste est triée
-//        // ALGORITHME ITÉRATIF}
-//
-//        int i = 2;
-//
-//        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i - 1) <= liste.getInfoAtPosit(i)) {
-//            i++;
-//        }
-//
-//        return (i == liste.getLongueur()+1);
-//    }
-
-    public static boolean verifTri(ListeChainee<Integer> liste){
+    public static boolean verifTri(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
         //{} => {résultat = vrai si liste est triée
         // ALGORITHME ITÉRATIF}
 
-        if (liste.getTete() == null) {
-            return true;
-        }
-        else {
-            Cellule<Integer> c = liste.getTete();
+        int i = 2;
 
-            while (c.getCelluleSuivante() != null && c != null && c.getInfo() <= c.getCelluleSuivante().getInfo()) {
-                c = c.getCelluleSuivante();
-            }
-
-            return (c.getCelluleSuivante() == null);
-        }
-    }
-
-
-
-    public static void afficheCellInt(Cellule<Integer> uneCellInt) {
-        // { uneCellInt n'est pas null }
-        // => {l'adresse et l'info protée par uneCellInt ont été affichées
-        // Exemple : (Cellule@3f91beef / 80 }
-
-        System.out.println("Adresse : " + uneCellInt + " / info : " + uneCellInt.getInfo());
-    }
-
-
-    public static void afficheGDdetaille(ListeChainee<Integer> listeInt) {
-        // { } => { les cellules de listeInt ont été affichées
-        // de la 1ère à la dernière }
-
-        afficheGDdetailleWorker(listeInt.getTete(), 1);
-    }
-
-
-    private static void afficheGDdetailleWorker(Cellule<Integer> cellCour,
-                                                int pos) {
-        // { pos = position de cellCour dans la liste, paramètre du modèle ] =>
-        // { affichage récursif avec saut de ligne toutes les 5 cellules }
-
-
-        if (cellCour != null) {
-            System.out.print(pos + ": ");
-            afficheCellInt(cellCour);
-            System.out.println(" -> ");
-
-            afficheGDdetailleWorker(cellCour.getCelluleSuivante(), pos+1);
-
-        }
-    }
-
-
-    public static Cellule<Integer> getCellPos(ListeChainee<Integer> listeInt,
-                                              int pos) {
-        //{ liste non vide, pos compris entre 1 et le nombre de cellules de liste}
-        // => { {résultat = cellule en position pos dans liste }
-
-        int i = 1;
-        Cellule<Integer> c = listeInt.getTete();
-
-        while (i < pos) {
-            c = c.getCelluleSuivante();
+        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i - 1) <= liste.getInfoAtPosit(i)) {
             i++;
         }
 
-        return c;
+        return (i == liste.getLongueur()+1);
     }
 
 
-
-    public static ListeChainee<Integer> sousListe(ListeChainee<Integer> listeInt,
-                                                  int posDeb, int posFin) {
-        // { posDeb <= posFin
-        // posDeb et posFin compris entre 1 et le nombre de cellules de listeInt }
-        // => { résultat = nouvelle liste constituée à partir des cellules de listeInt
-        // dont la position est dans l'intervalle [posDeb, posFin]
-
-        ListeChainee<Integer> sousListe = new ListeChainee<>();
-        Cellule<Integer> c = listeInt.getTete();
-        int i = 1;
-
-        while (i < posDeb) {
-            c = c.getCelluleSuivante();
-        }
-        sousListe.insereTete(c.getInfo());
-
-
-        while (i < posFin) {
-            Cellule<Integer> cellule = new Cellule<>(c.getInfo());
-            cellule.setCelluleSuivante(cellule);
-        }
-
-
-
-        return
-
-
-
-    }
 }
