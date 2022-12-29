@@ -4,29 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="963654fd-c650-4b0a-86e0-f4cb4e07ed25" name="Changes" comment="after modify output path">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="963654fd-c650-4b0a-86e0-f4cb4e07ed25" name="Changes" comment="after modify output patheuh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/.idea/TP5_B.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/TP5_B.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP5_B/TP5_B.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/out/production/TP5_B/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/out/production/TP5_B/Pollution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/out/production/TP5_B/ReleveMensuel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/out/production/TP5_B/Utilitaire.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP5_B/src/Pollution.java" beforeDir="false" afterPath="$PROJECT_DIR$/TP5_B/src/Pollution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Training/Training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Training/Training.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algoImportant/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/algoImportant/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP10/Cellule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP10/Cellule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP10/ControleSaisie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP10/ControleSaisie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP10/ExceptionMauvaisIndice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP10/ExceptionMauvaisIndice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP10/ListeChainee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP10/ListeChainee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP10/ListeInt_Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP10/ListeInt_Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP10/ListeInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP10/ListeInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TP10/Utilitaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TP10/Utilitaire.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +127,7 @@
       <workItem from="1670429461663" duration="5545000" />
       <workItem from="1671034785037" duration="769000" />
       <workItem from="1672077659334" duration="2405000" />
-      <workItem from="1672321522054" duration="2813000" />
+      <workItem from="1672321522054" duration="3314000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1670429823254</created>
@@ -171,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672321631205</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="after modify output patheuh">
+      <created>1672324603721</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672324603721</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +180,7 @@
     </ignored-roots>
     <MESSAGE value="first commit" />
     <MESSAGE value="after modify output path" />
-    <option name="LAST_COMMIT_MESSAGE" value="after modify output path" />
+    <MESSAGE value="after modify output patheuh" />
+    <option name="LAST_COMMIT_MESSAGE" value="after modify output patheuh" />
   </component>
 </project>
