@@ -26,5 +26,23 @@ public class Main {
         System.out.println(recherche.indiceValDicho(liste, 3));
         System.out.println(recherche.indiceValDicho(liste, 938));
 
+        // Réccursif
+        // factorielle
+        System.out.println(reccursif.factoriellerec(3));
+        // est Pair
+        System.out.println(reccursif.estPair(10));
+        System.out.println(reccursif.estPair(11));
+
+        // Dicho réccursif
+        System.out.println(reccursif.indicevaldichorec(liste, 3));
+        System.out.println(reccursif.indicevaldichorec(liste, 333));
+
+        // recherche max réccursif
+        System.out.println(reccursif.maxrec(liste));
+
     }
+
+
+
+
 }
