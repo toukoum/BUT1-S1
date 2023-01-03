@@ -10,7 +10,7 @@ public class ListeInt_Main {
         int i = 0;
 
         while (i < 15) {
-            listeInt.insereTete((int)(Math.random() * 100));
+            listeInt.insereTete((int) (Math.random() * 100));
             i++;
         }
 
@@ -34,13 +34,12 @@ public class ListeInt_Main {
         //Recherche de façon récursive d'un élément dans listeInt (true si présent)
         if (Utilitaire.rechValListe(listeInt, valeur) == true) {
             System.out.println("La saisie " + valeur + " que vous avez rentrez est bien présent dans la liste !");
-        }
-        else {
+        } else {
             System.out.println("La saisie " + valeur + " que vous avez rentrez n'est pas présente dans la liste !");
         }
 
         // Index de posVal dans listeInt
-        int posVal =  Utilitaire.premPosVal(listeInt, valeur);
+        int posVal = Utilitaire.premPosVal(listeInt, valeur);
         if (posVal != 0) {
             System.out.println(valeur + " se trouve à l'index " + posVal);
         }
@@ -58,7 +57,7 @@ public class ListeInt_Main {
         System.out.print("Affichage de la Gauche vers la Droite : ");
         listeInt.afficheGaucheDroiteIter();
         //insertion des éléments de listeInt dans listeTriee par appel de insereDansListeTriee
-        Cellule<Integer> c =listeInt.getTete();
+        Cellule<Integer> c = listeInt.getTete();
 
         while (c != null) {
             Utilitaire.insereDansListeTriee(listeTriee, c.getInfo());
@@ -76,11 +75,6 @@ public class ListeInt_Main {
 
         //affichage pour vérification du nombre d'éléments de listeTriee et des éléments de listeTriee
         System.out.println("La liste comporte " + listeTriee.getLongueur() + " éléments.");
-
-
-
-
-
 
 
     }

@@ -34,21 +34,20 @@ public class tri {
 
         while (i < liste.size()) {
             j = i;
-            int inser = liste.get(i);
+            int clé = liste.get(i);
 
-            while (j > 0 && liste.get(j - 1) > inser) {
+            while (j > 0 && liste.get(j - 1) > clé) {
                 liste.set(j, liste.get(j - 1));
                 j -= 1;
             }
-            liste.set(j, inser);
+            liste.set(j, clé);
             i += 1;
         }
 
         return liste;
     }
 
-
-    public static ArrayList<Integer> triSelection(ArrayList<Integer> liste) {
+    public static ArrayList<Integer> triselection(ArrayList<Integer> liste) {
         int i = 0;
 
         while (i < liste.size() - 1) {
@@ -74,7 +73,32 @@ public class tri {
     }
 
 
-    public static boolean veriftri (ArrayList<Integer> liste){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static boolean veriftri(ArrayList<Integer> liste) {
 
         int i = 1;
 

@@ -73,7 +73,7 @@ public class Utilitaire {
     }
 
 
-//    public static int sommeListeInt(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
+    //    public static int sommeListeInt(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
 //        //{liste non vide} => {résultat = somme des éléments de liste
 //
 //        int somme = 0;
@@ -87,7 +87,7 @@ public class Utilitaire {
 //
 //
 //    }
-    public static int sommeListeInt(ListeChainee<Integer> liste){
+    public static int sommeListeInt(ListeChainee<Integer> liste) {
         //{liste non vide} => {résultat = somme des éléments de liste
 
         Cellule<Integer> c = liste.getTete();
@@ -163,12 +163,12 @@ public class Utilitaire {
 //        }
 //    }
 
-    public static int premPosVal(ListeChainee<Integer> liste, int val){
+    public static int premPosVal(ListeChainee<Integer> liste, int val) {
         //{liste non vide} => {résultat = position de la première cellule de liste
         // portant l'info val, 0 si non trouvée
         // ALGORITHME ITÉRATIF}
 
-        Cellule <Integer> c = liste.getTete();
+        Cellule<Integer> c = liste.getTete();
         int i = 1;
 
         while (c != null && c.getInfo() != val) {
@@ -178,8 +178,7 @@ public class Utilitaire {
 
         if (c != null && c.getInfo() == val) {
             return i;
-        }
-        else {
+        } else {
             return 0;
         }
     }
@@ -197,7 +196,7 @@ public class Utilitaire {
 //        liste.insereAtPosit(i, val);
 //    }
 
-    public static void insereDansListeTriee(ListeChainee<Integer> liste, int val) throws ExceptionMauvaisIndice {
+    public static void insereDansListeTriee(ListeChainee<Integer> liste, int val) {
         //{liste triée} => {une cellule d'info = val a été insérée dans liste,
         // liste reste triée après insertion - FORME ITÉRATIVE}
 
@@ -214,8 +213,7 @@ public class Utilitaire {
 
         if (p == null) {
             liste.insereTete(val);
-        }
-        else {
+        } else {
             Cellule<Integer> n = new Cellule<>(val);
             //n.setCelluleSuivante(p.getCelluleSuivante());
             p.setCelluleSuivante(n);
@@ -229,7 +227,7 @@ public class Utilitaire {
 
 
 
-    public static boolean verifTri(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
+/*    public static boolean verifTri(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
         //{} => {résultat = vrai si liste est triée
         // ALGORITHME ITÉRATIF}
 
@@ -240,6 +238,25 @@ public class Utilitaire {
         }
 
         return (i == liste.getLongueur()+1);
+    }*/
+
+    public static boolean verifTri(ListeChainee<Integer> liste) {
+        //{} => {résultat = vrai si liste est triée
+        // ALGORITHME ITÉRATIF}
+
+
+        Cellule<Integer> c = liste.getTete();
+        Cellule<Integer> s = c.getCelluleSuivante();
+
+
+        while (s != null && c.getInfo() <= s.getInfo()) {
+            c = s;
+            s = s.getCelluleSuivante();
+        }
+
+        return (s == null);
+
+
     }
 
 
