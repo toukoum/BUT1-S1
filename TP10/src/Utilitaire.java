@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -72,21 +73,6 @@ public class Utilitaire {
         }
     }
 
-
-    //    public static int sommeListeInt(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
-//        //{liste non vide} => {résultat = somme des éléments de liste
-//
-//        int somme = 0;
-//        int i = 1;
-//        while (i <= liste.getLongueur()) {
-//            somme += liste.getInfoAtPosit(i);
-//            i++;
-//        }
-//
-//        return somme;
-//
-//
-//    }
     public static int sommeListeInt(ListeChainee<Integer> liste) {
         //{liste non vide} => {résultat = somme des éléments de liste
 
@@ -144,25 +130,6 @@ public class Utilitaire {
 
     }
 
-
-//    public static int premPosVal(ListeChainee<Integer> liste, int val) throws ExceptionMauvaisIndice {
-//        //{liste non vide} => {résultat = position de la première cellule de liste
-//        // portant l'info val, 0 si non trouvée
-//        // ALGORITHME ITÉRATIF}
-//
-//        int i = 1;
-//
-//        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i) != val) {
-//            i++;
-//        }
-//
-//        if (i <= liste.getLongueur() && liste.getInfoAtPosit(i) == val) {
-//            return i;
-//        } else {
-//            return 0;
-//        }
-//    }
-
     public static int premPosVal(ListeChainee<Integer> liste, int val) {
         //{liste non vide} => {résultat = position de la première cellule de liste
         // portant l'info val, 0 si non trouvée
@@ -182,19 +149,6 @@ public class Utilitaire {
             return 0;
         }
     }
-
-
-//    public static void insereDansListeTriee(ListeChainee<Integer> liste, int val) throws ExceptionMauvaisIndice {
-//        //{liste triée} => {une cellule d'info = val a été insérée dans liste,
-//        // liste reste triée après insertion - FORME ITÉRATIVE}
-//
-//        int i = 1;
-//
-//        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i) <= val) {
-//            i++;
-//        }
-//        liste.insereAtPosit(i, val);
-//    }
 
     public static void insereDansListeTriee(ListeChainee<Integer> liste, int val) {
         //{liste triée} => {une cellule d'info = val a été insérée dans liste,
@@ -224,22 +178,6 @@ public class Utilitaire {
 
     }
 
-
-
-
-/*    public static boolean verifTri(ListeChainee<Integer> liste) throws ExceptionMauvaisIndice {
-        //{} => {résultat = vrai si liste est triée
-        // ALGORITHME ITÉRATIF}
-
-        int i = 2;
-
-        while (i <= liste.getLongueur() && liste.getInfoAtPosit(i - 1) <= liste.getInfoAtPosit(i)) {
-            i++;
-        }
-
-        return (i == liste.getLongueur()+1);
-    }*/
-
     public static boolean verifTri(ListeChainee<Integer> liste) {
         //{} => {résultat = vrai si liste est triée
         // ALGORITHME ITÉRATIF}
@@ -259,5 +197,141 @@ public class Utilitaire {
 
     }
 
+    public static void afficheCellInt(Cellule<Integer> uneCellInt) {
+        System.out.println(uneCellInt + " / " + uneCellInt.getInfo());
+    }
 
+    public static void afficheGDdetaille(ListeChainee<Integer> listeInt) {
+        // { } => { les cellules de listeInt ont été affichées
+        // de la 1ère à la dernière }
+
+        if (!listeInt.estVide()) {
+            Cellule<Integer> c = listeInt.getTete();
+            afficheGDdetailleWorker(c, 0);
+        }
+    }
+
+
+    private static void afficheGDdetailleWorker(Cellule<Integer> cellCour,
+                                                int pos) {
+        // { pos = position de cellCour dans la liste, paramètre du modèle ] =>
+        // { affichage récursif avec saut de ligne toutes les 5 cellules }
+
+
+        if (cellCour == null) {
+            return;
+        }
+
+        afficheCellInt(cellCour);
+
+
+        if (pos % 5 == 4) {
+            System.out.println();
+        }
+        afficheGDdetailleWorker(cellCour.getCelluleSuivante(), pos + 1);
+
+    }
+
+
+
+
+    public static Cellule<Integer> getCellPos(ListeChainee<Integer> listeInt,
+                                              int pos) {
+        //{ liste non vide, pos compris entre 1 et le nombre de cellules de liste}
+        // => { {résultat = cellule en position pos dans liste }
+
+        Cellule<Integer> c = listeInt.getTete();
+        int i = 1;
+
+        while (pos != i && c!=null) {
+            i++;
+            c = c.getCelluleSuivante();
+        }
+
+
+        return c;
+    }
+
+
+    public static ListeChainee<Integer> sousListe(ListeChainee<Integer> listeInt,
+                                                  int posDeb, int posFin) {
+        // { posDeb <= posFin
+        // posDeb et posFin compris entre 1 et le nombre de cellules de listeInt }
+        // => { résultat = nouvelle liste constituée à partir des cellules de listeInt
+        // dont la position est dans l'intervalle [posDeb, posFin]
+
+
+        ListeChainee<Integer> sousList = new ListeChainee<>();
+        int i = 0;
+
+        while (posFin >= posDeb) {
+            Cellule<Integer> c = listeInt.getTete();
+            while (i < posFin-1) {
+                c = c.getCelluleSuivante();
+                i++;
+            }
+            sousList.insereTete(c.getInfo());
+            posFin-=1;
+            i=0;
+        }
+
+
+        return sousList;
+
+    }
+
+
+    public static void insereL2DansL1(ListeChainee<Integer> l1,
+                                      ListeChainee<Integer> l2, int pos) {
+        // { } => { Autant de cellules qu'en comporte l2 ont été insérées dans l1
+        // * leur attribut info est identique à celui des cellules de l2
+        // et elles se succèdent selon l'ordre qu'elles avaient dans l2
+        // * la cellule en position pos dans l1 a pour cellule suivante
+        // la première de ces cellules
+        // * la dernière des cellules insérées a pour cellule suivante celle
+        // qui suivait initialement la cellule de position pos dans l1 }
+
+
+        int i = 1;
+        Cellule<Integer> c = l1.getTete();
+        Cellule<Integer> cellulel2 = l2.getTete();
+        Cellule<Integer> cellulesuivantel1;
+
+        while (i < pos) {
+            c = c.getCelluleSuivante();
+
+            i++;
+        }
+        cellulesuivantel1 = c.getCelluleSuivante();
+
+        while (cellulel2 != null) {
+            c.setCelluleSuivante(cellulel2);
+            c = cellulel2;
+            cellulel2 = cellulel2.getCelluleSuivante();
+
+        }
+        c.setCelluleSuivante(cellulesuivantel1);
+
+    }
+
+
+    public static ListeChainee<Integer> fusionL1L2(ListeChainee<Integer> l1,
+                                                   ListeChainee<Integer> l2) {
+        // { l1 et l2 non vides } =>
+        // {résultat = une liste triée dont les cellules portent les infos des cellules
+        // de l1 et celles des cellules de l2, sans doublons }
+
+        ListeChainee<Integer> listetrie = new ListeChainee<>();
+        insereL2DansL1(l1, l2, 1);
+        Cellule<Integer> c = l1.getTete();
+
+        while (c != null) {
+            if (premPosVal(listetrie, c.getInfo()) == 0) {
+                insereDansListeTriee(listetrie, c.getInfo());
+                }
+            c = c.getCelluleSuivante();
+        }
+        return listetrie;
+
+    }
 }
