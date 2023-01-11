@@ -27,7 +27,7 @@ public class tri {
     }
 
 
-    public static ArrayList<Integer> triInsertion(ArrayList<Integer> liste) {
+    public static ArrayList<Integer> triInsertion2(ArrayList<Integer> liste) {
 
         int i = 1;
         int j;
@@ -47,7 +47,7 @@ public class tri {
         return liste;
     }
 
-    public static ArrayList<Integer> triselection(ArrayList<Integer> liste) {
+    public static ArrayList<Integer> triselection2(ArrayList<Integer> liste) {
         int i = 0;
 
         while (i < liste.size() - 1) {
@@ -73,10 +73,30 @@ public class tri {
     }
 
 
+    public static ArrayList<Integer> triselection(ArrayList<Integer> liste) {
 
 
+        int i = 0;
 
+        while (i < liste.size() - 1) {
+            int j = i+1;
+            int indmin = i;
 
+            while (j < liste.size()) {
+                if (liste.get(indmin) > liste.get(j)) {
+                    indmin = j;
+                }
+                j++;
+            }
+            if (indmin != i) {
+                int temp = liste.get(i);
+                liste.set(i, liste.get(indmin));
+                liste.set(indmin, temp);
+            }
+            i++;
+        }
+        return liste;
+    }
 
 
 

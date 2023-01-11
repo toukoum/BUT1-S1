@@ -8,7 +8,7 @@ public class Main {
 
 
 //        // recherche ittérative dans liste
-//        ArrayList<Integer> liste = new ArrayList<>(Arrays.asList(2, 4, 5, 32, 7, 3, 5, 34, 2, 9));
+        ArrayList<Integer> liste = new ArrayList<>(Arrays.asList(2, 4, 5, 32, 7, 3, 5, 34, 2, 9));
 
 //        ---------------------------------------
 //        Tri
@@ -20,8 +20,8 @@ public class Main {
 //        //tri insertion
 //        System.out.println(tri.triInsertion(liste));
 //
-//        //tri selection
-//        System.out.println(tri.triselection(liste));
+        //tri selection
+        System.out.println(tri.triselection(liste));
 //
 //        //verif tri
 //        System.out.println(tri.veriftri(liste));
