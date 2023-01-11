@@ -30,7 +30,7 @@ public class PaysUtilitaire {
             i++;
         }
 
-        return (i == vPays.size() - 1);
+        return (i == vPays.size());
     }
 
 
@@ -46,7 +46,7 @@ public class PaysUtilitaire {
 
         Pays newPays = new Pays(unNom, unCont, 0, 0);
 
-        while (i < vPays.size() && vPays.get(i).compareTo(newPays) <= 0) {
+        while (i < vPays.size() && vPays.get(i).compareTo(newPays) < 0) {
             i++;
         }
 
@@ -69,15 +69,43 @@ public class PaysUtilitaire {
         int inf = 0;
         int sup = vPays.size();
 
-        if (vPays.get(vPays.size()).compareTo(newPays) < 0) {
+        if (vPays.get(vPays.size()-1).compareTo(newPays) < 0) {
             return -vPays.size();
         } else {
-            int m = (inf+sup)/2;
 
-            if (vPays.get(m) >= vPays.get())
+
+            while (inf < sup) {
+                int m = (inf + sup) / 2;
+
+                if (vPays.get(m).compareTo(newPays) >= 0) {
+                    sup = m;
+                } else {
+                    inf = m + 1;
+                }
+            }
+            if (vPays.get(sup).compareTo(newPays) == 0) {
+                return sup;
+            } else {
+                return -sup;
+            }
 
         }
+    }
 
+    public static ListeChaineeBis<Pays> creeListePays(ArrayList<Pays> vPays) {
+        // { vPays non vide } =>
+        // { résultat = une liste chaînée dont les cellules de position x ont comme
+        // attribut info, le pays d'indice x-1 dans vPays }
+
+        ListeChaineeBis<Pays> listeMonde = new ListeChaineeBis<>();
+
+        int i = vPays.size()-1;
+        while (i >= 0) {
+            listeMonde.insereTete(vPays.get(i));
+            i--;
+        }
+
+        return listeMonde;
 
     }
-    }
+}

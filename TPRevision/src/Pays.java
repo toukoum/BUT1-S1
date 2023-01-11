@@ -50,8 +50,17 @@ public class Pays implements Comparable<Pays> {
     }
 
     // pour l'affichage d'un pays
+
+
     @Override
     public String toString() {
-        return continent + " : " + nom + " (sup. : " +superficie+", pop. : " + population+ ")" + "\n";
+        return "Pays{" +
+                "nom='" + nom + '\'' +
+                ", continent='" + continent + '\'' +
+                ", population=" + population +
+                ", superficie=" + superficie +
+                '}';
     }
+
+
 }

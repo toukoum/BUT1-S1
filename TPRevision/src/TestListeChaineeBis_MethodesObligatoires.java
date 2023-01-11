@@ -7,7 +7,7 @@ public class TestListeChaineeBis_MethodesObligatoires {
         // 1 - initialisation de listeInt avec 10 entiers générés aléatoirement
         //      test insereTete
         int unEnt;
-        for (int i = 1; i <= 10; i++ ) {
+        for (int i = 1; i <= 10; i++) {
             // entier généré : valeur comprise entre 0 et 100
             unEnt = (int) (Math.random() * 101);
             // insertion en tête de listeInt de l'entier généré
@@ -54,10 +54,11 @@ public class TestListeChaineeBis_MethodesObligatoires {
         //      test getInfoAtPosit
         System.out.println();
         System.out.print("Donnez le numéro d'une cellule de la liste : ");
-        int pos = lecteur.nextInt(); lecteur.nextLine();
+        int pos = lecteur.nextInt();
+        lecteur.nextLine();
         System.out.println("Information portée par la cellule à cette position : ");
         try {
-            System.out.println("Information portée par la cellule en position " + pos + " dans listeInt : "+ listeInt.getInfoAtPosit(pos));
+            System.out.println("Information portée par la cellule en position " + pos + " dans listeInt : " + listeInt.getInfoAtPosit(pos));
         } catch (ExceptionMauvaisIndice e) {
             System.out.println("Position invalide...");
             System.out.println("Poursuite de l'exécution");
@@ -67,7 +68,8 @@ public class TestListeChaineeBis_MethodesObligatoires {
         //      test setInfoAtPosit
         System.out.println();
         System.out.print("Donnez un entier : ");
-        unEnt = lecteur.nextInt(); lecteur.nextLine();
+        unEnt = lecteur.nextInt();
+        lecteur.nextLine();
         System.out.println("Remplacement de l'information portée par la cellule en position " + pos + " dans listeInt " + " par l'entier saisi");
         if (!listeInt.setInfoAtPosit(pos, unEnt)) {
             System.out.println("La position saisie étant invalide, aucun remplacement n'a pu être effectué");
