@@ -10,5 +10,7 @@ public class ControleSaisie {
 
         int i = Utilitaire.getIntV2(lecteur);
         float f = Utilitaire.getFloatV2(lecteur);
+
+        // blablabalbalbalblabalblablablabalb
     }
 }

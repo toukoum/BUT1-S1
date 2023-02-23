@@ -61,6 +61,4 @@ public class Pays implements Comparable<Pays> {
                 ", superficie=" + superficie +
                 '}';
     }
-
-
 }
